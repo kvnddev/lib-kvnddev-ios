@@ -1,6 +1,6 @@
 import Foundation
 
-extension NSObject {
+public extension NSObject {
     @discardableResult
     static func swizzleInstanceMethod(_ originalSelector: Selector, with newSelector: Selector) -> Bool {
         guard let originalMethod = class_getInstanceMethod(self, originalSelector),
