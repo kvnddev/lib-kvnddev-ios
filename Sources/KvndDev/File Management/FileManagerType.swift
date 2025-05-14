@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol FileManagerType {
+public protocol FileManagerType: Sendable {
     func createDirectory(atPath path: String) throws
     func createFile(atPath path: String, contentIfEmpty content: Data?) throws -> FileHandleType
     func contentsOfDirectory(atPath path: String) throws -> [URL]

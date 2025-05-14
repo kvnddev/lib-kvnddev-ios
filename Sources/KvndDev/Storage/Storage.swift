@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol Storage {
+public protocol Storage: Sendable {
     func value<Value: StorableData>(forKey key: String) throws -> Value
     func set<Value: StorableData>(_ value: Value?, forKey key: String)
     func hasValue(forKey key: String) -> Bool
