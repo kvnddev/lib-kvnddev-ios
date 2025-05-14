@@ -26,9 +26,9 @@ public final class KeychainStore: Storage {
 
     // MARK: Initialization
 
-    init(accessGroup: String? = nil,
-         synchronizable: Bool = true,
-         nonPersistentInstallationStorage: Storage = UserDefaultsStore.standard) {
+    public init(accessGroup: String? = nil,
+                synchronizable: Bool = true,
+                nonPersistentInstallationStorage: Storage = UserDefaultsStore.standard) {
         self.accessGroup = accessGroup
         self.synchronizable = synchronizable
         self.nonPersistentInstallationStorage = nonPersistentInstallationStorage

@@ -20,7 +20,7 @@ public extension NSObject {
     }
     
     func associatedValue<T: AnyObject>(forKey key: UnsafeRawPointer) -> T? {
-        return objc_getAssociatedObject(self, key) as? T
+        objc_getAssociatedObject(self, key) as? T
     }
 
     func associatedValue<T: AnyObject>(forKey key: UnsafeRawPointer, defaultValue: @autoclosure () -> T, policy: Policy = .strong) -> T {

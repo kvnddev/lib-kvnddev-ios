@@ -11,7 +11,7 @@ public final class UserDefaultsStore: Storage {
 
     // MARK: Initialization
 
-    init(backingUserDefaults: UserDefaults = .standard) {
+    public init(backingUserDefaults: UserDefaults = .standard) {
         self.backingUserDefaults = backingUserDefaults
     }
 
